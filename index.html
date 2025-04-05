@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Для моей любимой 💖</title>
+  <style>
+    body {
+      background: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #e60073;
+    }
+
+    #message {
+      margin: 20px 0;
+      font-size: 1.4em;
+      color: #333;
+      min-height: 80px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background: #ff66a3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <h1>Привет, моя любимая 💖</h1>
+  <div id="message">Нажми на кнопку, чтобы прочитать что-то приятное 😊</div>
+  <button onclick="showMessage()">Показать слова любви</button>
+
+  <script>
+    const messages = [
+      "Ты — моё солнышко даже в самый пасмурный день ☀️",
+      "Я люблю тебя больше, чем слова могут описать ❤️",
+      "С тобой каждый момент особенный ✨",
+      "Ты самая красивая и добрая девушка на свете 🌹",
+      "Спасибо, что ты есть в моей жизни 🥰",
+      "Моё сердце принадлежит только тебе 💞",
+      "Ты делаешь меня счастливее с каждым днём 💫"
+    ];
+
+    function showMessage() {
+      const message = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").textContent = message;
+    }
+  </script>
+</body>
+</html>
